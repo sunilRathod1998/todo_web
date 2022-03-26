@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+.crd{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100vw;
+    height: 100vh;
+}
+.card{
+    background-color: antiquewhite;
+    width: 200px;
+    box-shadow: 5px 20px 25px rgba(0,0,0, 10);
+}
+.card input{
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px;
+    }
+.tasks a {
+    text-decoration: none;
+}
+.tasks del{
+    color: red;
+}

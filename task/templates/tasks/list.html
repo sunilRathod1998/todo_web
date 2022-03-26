@@ -1,0 +1,33 @@
+
+{% extends 'tasks/base.html' %}
+
+{% block title %}home{% endblock title %}</title>
+{% block list %}
+    
+<div class="crd">
+
+  <div class="card w-50">
+    <div class="card-body">
+        <form action="" method='POST'>
+            {% csrf_token %}
+            {{form.title}}
+            <input type="submit" class='btn btn-primary' name='create_task'>
+        </form>
+        {% for task in tasks %}
+        <div class='tasks'>
+            {% if task.complete %}
+            <a href={% url 'update' task.id %}>
+            <div><p><button>{{ task }}</button class="btn btn-outline-danger del"> <a href= {% url 'delete' task.id %} >  Delete</a></span></p></a>
+
+            {% else %}
+
+            <a href={% url 'update' task.id %}>
+                <p>{{task}} <button class="btn btn-outline-danger del"><a href= {% url 'delete' task.id %} >  Delete</a></button></p></a>
+        {% endif %}</div>
+    {% endfor %} 
+    </div>
+  </div>
+</div>
+
+
+{% endblock list %}
