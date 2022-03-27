@@ -1,30 +1,90 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    font-weight: bold;
 
 }
 
-.crd{
-    background-color: whitesmoke;
+body{
+    background-color: #4fa6d8;
     display: flex;
     justify-content: center;
     align-items: center;    
     width: 100vw;
     height: 100vh;
 }
-.card{
-    background-color: antiquewhite;
-    width: 200px;
-    box-shadow: 5px 20px 25px rgba(0,0,0, 10);
+body::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(20% at 10% 10%);
 }
-.card input{
-    height: 40px;
+
+body::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(40% at right 70%);
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    /* width: 40vw; */
+    border-radius: 10px;
+    box-shadow: 20px 20px 50px rgba(0,0,0, .5);
+    padding: 10px;
+    z-index: 1;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.card_top input{
+    height: 2rem;
     border-radius: 5px;
     margin: 5px;
     }
-.tasks a {
+.task{
+    margin: 15px 0 ;
+    color: black;
+}
+.task a {
     text-decoration: none;
+    padding-right: 10px;
+    
 }
-.tasks del{
-    color: red;
+.task a{
+    color: rgb(26, 4, 4);
 }
+.task .del{
+    background-color: rgb(153, 8, 8, .6);
+    margin-left:6px;
+    color: white;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+.btn{
+    background-color: rgba(2, 20, 185, 0.5);
+    color: white;
+    padding: 0 5px;
+}
+.del:hover{
+    background-color: blueviolet;
+    color: white;
+    
+
+}
+.del a:hover{
+    color: white;
+    
