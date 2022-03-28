@@ -8,15 +8,15 @@
 
 }
 
-body{
+.container{
     background-color: #4fa6d8;
     display: flex;
     justify-content: center;
     align-items: center;    
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
-body::before{
+.container::before{
     content:"";
     position: absolute;
     top: 0;
@@ -24,10 +24,10 @@ body::before{
     width: 100%;
     height: 100%;
     background: linear-gradient(#f00, #f0f);
-    clip-path: circle(20% at 10% 10%);
+    clip-path: circle(16% at 0% 80%);
 }
 
-body::after{
+.container::after{
     content:"";
     position: absolute;
     top: 0;
@@ -35,7 +35,7 @@ body::after{
     width: 100%;
     height: 100%;
     background: linear-gradient(#2196f3, #e91e63);
-    clip-path: circle(40% at right 70%);
+    clip-path: circle(40% at right 77%);
 }
 
 .card{
@@ -87,4 +87,25 @@ body::after{
 }
 .del a:hover{
     color: white;
-    
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(195, 238, 238);
+    height: 3rem;
+
+
+}
+.logo{
+    display: inline-block;
+    margin: 0 50px 0 75px;
+    font: 30px;
+}
+.links ul li{
+    display: inline;
+    margin: 0 15px;
+}
+.logo a{
+    font-size: 30px;
+}
